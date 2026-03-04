@@ -1,0 +1,6 @@
+# --- project-wide library paths (relative to this xschemrc) ---
+set PROJ_ROOT [file normalize [file join [file dirname [info script]] ../..]]
+
+
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/nand/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/inverter/schematic

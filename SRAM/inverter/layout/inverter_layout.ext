@@ -1,0 +1,18 @@
+timestamp 1769263767
+version 8.3
+tech scmos
+style AMI0.5um(amic5)from:T11Z
+scale 1000 1 15
+resistclasses 82400 102700 816000 816000 1 22300 41300 41300 90 90 60
+port "OUT" 3 40 -66 44 -64 m1
+port "IN" 1 14 -68 16 -64 m1
+port "VDD" 2 26 -12 30 -10 m1
+port "VSS" 4 28 -106 32 -104 m1
+node "OUT" 290 1787.64 40 -66 m1 192 56 448 88 0 0 0 0 0 0 0 0 0 0 0 0 768 152 0 0 0 0
+node "IN" 365 923.46 14 -68 m1 0 0 0 0 0 0 0 0 0 0 440 180 0 0 0 0 192 56 0 0 0 0
+node "VDD" 1160 5339.7 26 -12 m1 144 48 448 88 3960 252 0 0 0 0 0 0 0 0 0 0 864 168 0 0 0 0
+substrate "VSS" 0 0 28 -106 m1 192 56 144 48 0 0 0 0 0 0 0 0 0 0 0 0 672 136 0 0 0 0
+cap "VDD" "OUT" 100.44
+cap "IN" "VDD" 286.02
+device mosfet nfet 28 -90 29 -89 4 12 "VSS" "IN" 8 0 "VSS" 12 192,56 "OUT" 12 192,56
+device mosfet pfet 28 -54 29 -53 4 28 "VDD" "IN" 8 0 "VDD" 28 448,88 "OUT" 28 448,88

@@ -1,0 +1,142 @@
+timestamp 1772623653
+version 8.3
+tech scmos
+style AMI0.5um(amic5)from:T11Z
+scale 1000 1 15
+resistclasses 82400 102700 816000 816000 1 22300 41300 41300 90 90 60
+use sram_2x2_layout sram_2x2_layout_0 1 0 -12 0 1 166
+use row_decoder_layout row_decoder_layout_0 1 0 -302 0 -1 118
+use inverter_layout inverter_layout_0 1 0 118 0 1 -436
+use combined combined_0 1 0 -194 0 1 -440
+port "RAS" 5 -332 158 -320 170 m2
+port "CA" 10 116 -508 130 -496 m1
+port "DATA" 9 -476 -478 -470 -470 m1
+port "WE" 3 -674 -458 -662 -446 m1
+port "SAE" 6 -80 -408 -70 -398 m1
+port "OUT" 7 10 -314 18 -304 m1
+port "VSS" 4 268 -174 290 -150 m1
+port "RA" 2 -332 68 -320 80 m1
+port "PRE" 8 134 484 146 496 m1
+port "VDD" 1 280 164 304 186 m1
+port "VDD" 1 134 556 146 564 m1
+node "RAS" 0 469.44 -332 158 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 144 48 0 0
+node "m1_166_n504#" 1 2613.39 166 -504 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 564 200 0 0 0 0
+node "m1_138_n454#" 3 4492.47 138 -454 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 196 56 1192 388 0 0
+node "CA" 2 3649.5 116 -508 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 840 276 0 0 0 0
+node "DATA" 0 344.28 -476 -478 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48 28 0 0 0 0
+node "WE" 0 633.24 -674 -458 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 144 48 0 0 0 0
+node "m1_226_n430#" 7 13643.6 226 -430 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 412 128 4852 1212 0 0
+node "SAE" 0 513.75 -80 -408 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 100 40 0 0 0 0
+node "m1_46_n384#" 5 10491.8 46 -384 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 196 56 2700 492 2904 724
+node "OUT" 0 455.4 10 -314 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80 36 0 0 0 0
+node "m1_230_n170#" 3 8217.69 230 -170 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 892 296 2308 408 0 0
+node "m1_36_n170#" 3 8762.85 36 -170 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1228 324 2308 408 0 0
+node "VSS" 2 10757 268 -174 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4728 672 0 0 0 0
+node "m1_n170_n200#" 1 6319.26 -170 -200 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2376 420 0 0 0 0
+node "m1_n12_64#" 0 722.04 -12 64 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 144 56 0 0 0 0
+node "RA" 0 633.24 -332 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 144 48 0 0 0 0
+node "m1_n24_170#" 0 1389.48 -24 170 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 528 92 0 0 0 0
+node "m1_n12_234#" 0 1917.18 -12 234 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 648 132 0 0 0 0
+node "m1_n48_304#" 1 2236.56 -48 304 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224 60 576 148 0 0
+node "m1_232_340#" 0 449.82 232 340 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 72 36 0 0 0 0
+node "m1_176_340#" 0 449.82 176 340 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 72 36 0 0 0 0
+node "m1_92_340#" 0 449.82 92 340 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 72 36 0 0 0 0
+node "a_212_408#" 735 5040.48 212 408 pdif 0 0 2112 280 0 0 0 0 0 0 0 0 0 0 0 0 1612 292 940 180 0 0
+node "a_176_408#" 719 5040.48 176 408 pdc 0 0 2208 284 0 0 0 0 0 0 0 0 0 0 0 0 1612 292 940 180 0 0
+node "a_74_408#" 735 5040.48 74 408 pdif 0 0 2112 280 0 0 0 0 0 0 0 0 0 0 0 0 1612 292 940 180 0 0
+node "a_38_408#" 719 5066.4 38 408 pdc 0 0 2208 284 0 0 0 0 0 0 0 0 0 0 0 0 1612 292 940 180 0 0
+node "PRE" 2992 799.2 134 484 m1 0 0 0 0 0 0 0 0 0 0 2336 1128 0 0 0 0 288 72 0 0 0 0
+node "VDD" 1794 55778.7 134 556 m1 144 48 2880 312 40128 808 0 0 0 0 0 0 0 0 0 0 6844 1652 0 0 0 0
+substrate "w_n1073741817_n1073741817#" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "a_38_408#" "VDD" 329.49
+cap "m1_226_n430#" "m1_46_n384#" 414.72
+cap "m1_36_n170#" "m1_46_n384#" 12.96
+cap "a_74_408#" "VDD" 296.01
+cap "PRE" "a_74_408#" 56.16
+cap "m1_230_n170#" "m1_226_n430#" 437.4
+cap "PRE" "VDD" 2444.76
+cap "a_74_408#" "m1_92_340#" 48.6
+cap "m1_176_340#" "a_176_408#" 48.6
+cap "VDD" "a_176_408#" 296.01
+cap "a_212_408#" "m1_232_340#" 48.6
+cap "PRE" "a_176_408#" 56.16
+cap "a_212_408#" "VDD" 329.49
+device mosfet pfet 208 408 209 409 4 48 "VDD" "PRE" 8 0 "a_176_408#" 48 1536,160 "a_212_408#" 48 1440,156
+device mosfet pfet 70 408 71 409 4 48 "VDD" "PRE" 8 0 "a_38_408#" 48 1536,160 "a_74_408#" 48 1440,156
+device mosfet pfet 224 478 225 479 4 48 "VDD" "PRE" 8 0 "VDD" 48 720,78 "a_212_408#" 48 672,124
+device mosfet pfet 190 478 191 479 4 48 "VDD" "PRE" 8 0 "a_176_408#" 48 672,124 "VDD" 48 720,78
+device mosfet pfet 86 478 87 479 4 48 "VDD" "PRE" 8 0 "VDD" 48 720,78 "a_74_408#" 48 672,124
+device mosfet pfet 52 478 53 479 4 48 "VDD" "PRE" 8 0 "a_38_408#" 48 672,124 "VDD" 48 720,78
+cap "inverter_layout_0/IN" "inverter_layout_0/VDD" 33.48
+cap "inverter_layout_0/IN" "combined_0/m1_n356_84#" 30.24
+cap "inverter_layout_0/IN" "combined_0/MUX1_0/MUX_OUT" 12.96
+cap "inverter_layout_0/VDD" "combined_0/m1_n356_84#" 14.4
+cap "combined_0/MUX1_0/MUX_OUTB" "inverter_layout_0/VDD" 112.5
+cap "combined_0/MUX1_0/MUX_OUTB" "inverter_layout_0/IN" 31.32
+cap "inverter_layout_0/VDD" "inverter_layout_0/OUT" 57.78
+cap "combined_0/MUX1_0/MUX_OUTB" "inverter_layout_0/OUT" 84.06
+cap "inverter_layout_0/VDD" "inverter_layout_0/IN" 16.74
+cap "combined_0/BL0" "combined_0/MUX1_0/VDD" 25.11
+cap "combined_0/BLB1" "combined_0/MUX1_0/VDD" 212.04
+cap "combined_0/Y0b" "combined_0/MUX1_0/VDD" 24.3
+cap "combined_0/BLB1" "combined_0/BLB0" 16.2
+cap "combined_0/BLB0" "combined_0/MUX1_0/VDD" 113.76
+cap "combined_0/Senseamp_0/VDD" "row_decoder_layout_0/VDD" 100.44
+cap "combined_0/m1_144_236#" "m1_46_n384#" 34.56
+cap "m1_36_n170#" "combined_0/m1_144_236#" 32.4
+cap "sram_2x2_layout_0/sram_cell_layout_2/VDD" "sram_2x2_layout_0/sram_cell_layout_2/BL" 2.84217e-14
+cap "sram_2x2_layout_0/sram_cell_layout_2/VSS" "sram_2x2_layout_0/sram_cell_layout_2/BLB" 48.6
+cap "sram_2x2_layout_0/sram_cell_layout_2/WL" "row_decoder_layout_0/inverter_layout_2/VDD" 2.84217e-14
+cap "sram_2x2_layout_0/sram_cell_layout_2/VSS" "sram_2x2_layout_0/sram_cell_layout_2/BL" 48.6
+cap "sram_2x2_layout_0/sram_cell_layout_2/VDD" "sram_2x2_layout_0/sram_cell_layout_2/BLB" 2.84217e-14
+cap "sram_2x2_layout_0/sram_cell_layout_3/BLB" "sram_2x2_layout_0/sram_cell_layout_3/VSS" 48.6
+cap "sram_2x2_layout_0/sram_cell_layout_3/VSS" "sram_2x2_layout_0/sram_cell_layout_3/BL" 48.6
+cap "sram_2x2_layout_0/sram_cell_layout_1/VSS" "sram_2x2_layout_0/sram_cell_layout_2/BLB" 7.10543e-15
+cap "sram_2x2_layout_0/sram_cell_layout_1/VSS" "sram_2x2_layout_0/sram_cell_layout_2/BL" 48.6
+cap "sram_2x2_layout_0/sram_cell_layout_3/BLB" "sram_2x2_layout_0/sram_cell_layout_0/VSS" 7.10543e-15
+cap "sram_2x2_layout_0/sram_cell_layout_3/BL" "sram_2x2_layout_0/sram_cell_layout_0/VSS" 7.10543e-15
+merge "sram_2x2_layout_0/sram_cell_layout_2/BL" "a_38_408#" -627.75 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 0 -48 0 0
+merge "a_38_408#" "combined_0/BL0"
+merge "combined_0/BL0" "m1_36_n170#"
+merge "sram_2x2_layout_0/sram_cell_layout_3/BL" "a_176_408#" -6511.68 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 -1876 -372 -1588 -396
+merge "a_176_408#" "combined_0/BL1"
+merge "combined_0/BL1" "m1_46_n384#"
+merge "row_decoder_layout_0/VDD" "combined_0/Senseamp_0/VDD" -633.24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -48 0 0 0 0
+merge "combined_0/Senseamp_0/VDD" "m1_n170_n200#"
+merge "combined_0/MUX1_0/Y0B" "inverter_layout_0/IN" -449.82 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -36 0 0 0 0
+merge "inverter_layout_0/IN" "CA"
+merge "sram_2x2_layout_0/sram_cell_layout_0/VSS" "m1_232_340#" -899.64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -144 -72 0 0 0 0
+merge "m1_232_340#" "m1_176_340#"
+merge "sram_2x2_layout_0/sram_cell_layout_2/BLB" "a_74_408#" -7612.92 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 -3024 -726 0 0
+merge "a_74_408#" "combined_0/BLB0"
+merge "combined_0/BLB0" "m1_226_n430#"
+merge "combined_0/OUT0" "OUT" -222 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -20 0 0 0 0
+merge "sram_2x2_layout_0/sram_cell_layout_3/VDD" "VDD" -266.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 0 0 0 0
+merge "row_decoder_layout_0/inverter_layout_3/VDD" "sram_2x2_layout_0/sram_cell_layout_2/VDD" -805.74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -56 0 0 0 0
+merge "sram_2x2_layout_0/sram_cell_layout_2/VDD" "m1_n24_170#"
+merge "sram_2x2_layout_0/sram_cell_layout_3/BLB" "a_212_408#" -877.56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -20 0 -48 0 0
+merge "a_212_408#" "combined_0/BLB1"
+merge "combined_0/BLB1" "m1_230_n170#"
+merge "sram_2x2_layout_0/sram_cell_layout_3/VSS" "combined_0/MUX1_0/VSS" -7999.14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3384 -508 0 0 0 0
+merge "combined_0/MUX1_0/VSS" "VSS"
+merge "combined_0/DATA" "DATA" -177.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 0 0 0 0
+merge "row_decoder_layout_0/OUT" "sram_2x2_layout_0/sram_cell_layout_2/WL" -444 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40 0 0 0 0
+merge "sram_2x2_layout_0/sram_cell_layout_2/WL" "m1_n12_64#"
+merge "combined_0/Y0" "combined_0/MUX1_0/Y0" -299.88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 0 0 0 0
+merge "combined_0/MUX1_0/Y0" "inverter_layout_0/OUT"
+merge "inverter_layout_0/OUT" "m1_166_n504#"
+merge "combined_0/MUX1_0/VDD" "inverter_layout_0/VDD" -1338.39 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -168 -52 -84 -40 0 0
+merge "inverter_layout_0/VDD" "m1_138_n454#"
+merge "combined_0/WE" "WE" -266.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 0 0 0 0
+merge "row_decoder_layout_0/OUT_B" "sram_2x2_layout_0/sram_cell_layout_1/WL" -444 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40 0 0 0 0
+merge "sram_2x2_layout_0/sram_cell_layout_1/WL" "m1_n12_234#"
+merge "sram_2x2_layout_0/w_n1073741817_n1073741817#" "row_decoder_layout_0/w_n1073741817_n1073741817#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "row_decoder_layout_0/w_n1073741817_n1073741817#" "inverter_layout_0/VSS"
+merge "inverter_layout_0/VSS" "combined_0/w_n1073741817_n1073741817#"
+merge "combined_0/w_n1073741817_n1073741817#" "w_n1073741817_n1073741817#"
+merge "combined_0/SE" "SAE" -444 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40 0 0 0 0
+merge "row_decoder_layout_0/inverter_layout_3/VSS" "sram_2x2_layout_0/sram_cell_layout_1/VSS" -899.82 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -72 -64 0 -16 0 0
+merge "sram_2x2_layout_0/sram_cell_layout_1/VSS" "m1_n48_304#"
+merge "m1_n48_304#" "m1_92_340#"
+merge "row_decoder_layout_0/IN" "RA" -266.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 0 0 0 0
+merge "row_decoder_layout_0/EN" "RAS" -208.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 0 0

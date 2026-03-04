@@ -1,0 +1,365 @@
+* NGSPICE file created from sram_top_module.ext - technology: scmos
+
+.subckt MUX1 BL1 Y0 Y0B MUX_OUT MUX_OUTB VDD VSS BL0 BLB1 BLB0
+M1000 BLB1 Y0B MUX_OUTB VSS nfet w=1.8u l=0.6u
++  ad=3.78p pd=7.8u as=3.78p ps=7.8u
+M1001 BLB0 Y0 MUX_OUTB VSS nfet w=1.8u l=0.6u
++  ad=3.78p pd=7.8u as=3.78p ps=7.8u
+M1002 BLB1 Y0 MUX_OUTB VDD pfet w=4.2u l=0.6u
++  ad=8.82p pd=12.6u as=8.82p ps=12.6u
+M1003 MUX_OUT Y0 BL1 VDD pfet w=4.2u l=0.6u
++  ad=8.82p pd=12.6u as=8.82p ps=12.6u
+M1004 BLB0 Y0B MUX_OUTB VDD pfet w=4.2u l=0.6u
++  ad=8.82p pd=12.6u as=8.82p ps=12.6u
+M1005 MUX_OUT Y0B BL0 VDD pfet w=4.2u l=0.6u
++  ad=8.82p pd=12.6u as=8.82p ps=12.6u
+M1006 MUX_OUT Y0 BL0 VSS nfet w=1.8u l=0.6u
++  ad=3.78p pd=7.8u as=3.78p ps=7.8u
+M1007 MUX_OUT Y0B BL1 VSS nfet w=1.8u l=0.6u
++  ad=3.78p pd=7.8u as=3.78p ps=7.8u
+C0 Y0B MUX_OUT 0.01296f
+C1 VDD MUX_OUT 0.62064f
+C2 VDD Y0B 0.81828f
+C3 Y0B MUX_OUTB 0.06156f
+C4 VDD MUX_OUTB 0.61227f
+C5 Y0 MUX_OUT 0.06156f
+C6 Y0B Y0 0.0729f
+C7 VDD BLB1 0.06696f
+C8 VDD Y0 1.06452f
+C9 VDD BL1 0.06696f
+C10 Y0 MUX_OUTB 0.01296f
+C11 VDD BLB0 0.06696f
+C12 VDD BL0 0.0837f
+C13 BLB0 VSS 2.1705f
+C14 BL1 VSS 2.1705f
+C15 BLB1 VSS 2.1705f
+C16 MUX_OUTB VSS 8.7f
+C17 MUX_OUT VSS 8.7444f
+C18 BL0 VSS 2.04822f
+C19 Y0 VSS 12.9041f
+C20 Y0B VSS 12.7562f
+C21 VDD VSS 19.2055f
+.ends
+
+.subckt Senseamp VDD OUT0 BLB BL SE VSS a_n28_6# a_64_16# a_n14_52#
+M1000 OUT0 a_64_16# VDD VDD pfet w=3.6u l=0.6u
++  ad=11.34p pd=13.8u as=10.26p ps=13.2u
+M1001 a_n28_6# SE VSS VSS nfet w=3.6u l=0.6u
++  ad=10.8p pd=13.2u as=9.72p ps=12.6u
+M1002 a_64_16# a_n14_52# VDD VDD pfet w=3.6u l=0.6u
++  ad=11.34p pd=13.8u as=10.26p ps=13.2u
+M1003 OUT0 SE VSS VSS nfet w=1.8u l=0.6u
++  ad=5.4p pd=9.6u as=4.86p ps=9u
+M1004 a_n14_52# a_n14_52# VDD VDD pfet w=3.6u l=0.6u
++  ad=11.34p pd=13.8u as=10.26p ps=13.2u
+M1005 a_64_16# BL a_n28_6# VSS nfet w=1.2u l=0.6u
++  ad=4.68p pd=9.6u as=4.32p ps=9u
+M1006 a_n14_52# BLB a_n28_6# VSS nfet w=1.2u l=0.6u
++  ad=4.68p pd=9.6u as=4.32p ps=9u
+C0 a_64_16# VDD 0.81027f
+C1 a_n28_6# BLB 0.00936f
+C2 a_n14_52# VDD 1.09584f
+C3 VDD OUT0 0.19251f
+C4 SE VSS 6.80832f
+C5 BL VSS 1.37172f
+C6 BLB VSS 1.41924f
+C7 OUT0 VSS 4.40916f
+C8 VDD VSS 23.1658f
+C9 a_n28_6# VSS 4.90203f
+C10 a_64_16# VSS 3.93084f
+C11 a_n14_52# VSS 4.96611f
+.ends
+
+.subckt WR_Drive VSS WE DATA BLB BL VDD a_26_104# a_206_26# a_n66_126#
+M1000 a_26_104# a_n66_126# BLB VDD pfet w=14.4u l=0.6u
++  ad=47.52p pd=35.4u as=38.88p ps=34.2u
+M1001 a_n66_126# WE VSS VSS nfet w=3.6u l=0.6u
++  ad=10.8p pd=13.2u as=9.72p ps=12.6u
+M1002 a_26_104# WE BLB VSS nfet w=7.2u l=0.6u
++  ad=21.6p pd=20.4u as=19.44p ps=19.8u
+M1003 a_206_26# a_26_104# VDD VDD pfet w=36u l=0.6u
++  ad=0.108n pd=78.00001u as=97.2p ps=77.4u
+M1004 a_26_104# DATA VSS VSS nfet w=18u l=0.6u
++  ad=54.00001p pd=42u as=48.6p ps=41.4u
+M1005 a_n66_126# WE VDD VDD pfet w=7.2u l=0.6u
++  ad=23.76p pd=21u as=19.44p ps=19.8u
+M1006 a_206_26# a_26_104# VSS VSS nfet w=18u l=0.6u
++  ad=54.00001p pd=42u as=48.6p ps=41.4u
+M1007 a_26_104# DATA VDD VDD pfet w=36u l=0.6u
++  ad=0.108n pd=78.00001u as=97.2p ps=77.4u
+M1008 BL a_n66_126# a_206_26# VDD pfet w=14.4u l=0.6u
++  ad=47.52p pd=35.4u as=38.88p ps=34.2u
+M1009 BL WE a_206_26# VSS nfet w=7.2u l=0.6u
++  ad=21.6p pd=20.4u as=19.44p ps=19.8u
+C0 DATA a_26_104# 0.0945f
+C1 a_n66_126# a_206_26# 0.0324f
+C2 WE BLB 0.054f
+C3 DATA a_n66_126# 0.0567f
+C4 WE a_26_104# 0.1728f
+C5 WE a_n66_126# 0.0756f
+C6 WE a_206_26# 0.0432f
+C7 VDD BLB 0.32364f
+C8 WE DATA 0.0756f
+C9 VDD a_26_104# 1.36044f
+C10 VDD BL 0.18135f
+C11 VDD a_n66_126# 1.8279f
+C12 VDD a_206_26# 0.58311f
+C13 DATA VDD 0.64188f
+C14 BLB a_n66_126# 0.0324f
+C15 a_26_104# a_n66_126# 0.1296f
+C16 WE VDD 0.38106f
+C17 BL VSS 3.0711f
+C18 BLB VSS 6.33129f
+C19 WE VSS 14.4431f
+C20 DATA VSS 3.13941f
+C21 VDD VSS 0.17094p
+C22 a_206_26# VSS 8.07627f
+C23 a_n66_126# VSS 12.073f
+C24 a_26_104# VSS 14.0477f
+.ends
+
+.subckt combined WE DATA VSS SE OUT0 BL0 BL1 BLB0 BLB1 WR_Drive_0/BL Y0 WR_Drive_0/BLB
++ VDD Y0b
+XMUX1_0 BL1 Y0 Y0b WR_Drive_0/BL WR_Drive_0/BLB VDD VSS BL0 BLB1 BLB0 MUX1
+XSenseamp_0 VDD OUT0 WR_Drive_0/BLB WR_Drive_0/BL SE VSS Senseamp_0/a_n28_6# Senseamp_0/a_64_16#
++ Senseamp_0/a_n14_52# Senseamp
+XWR_Drive_0 VSS WE DATA WR_Drive_0/BLB WR_Drive_0/BL VDD WR_Drive_0/a_26_104# WR_Drive_0/a_206_26#
++ WR_Drive_0/a_n66_126# WR_Drive
+C0 WR_Drive_0/BLB DATA 0.0162f
+C1 WR_Drive_0/BL Senseamp_0/a_n28_6# 0.0405f
+C2 Y0 VDD 0.0243f
+C3 WR_Drive_0/BLB WR_Drive_0/a_n66_126# 0.0324f
+C4 Y0b VDD 0.0243f
+C5 WR_Drive_0/BL Senseamp_0/a_64_16# 0.01188f
+C6 WR_Drive_0/BL SE 0.0324f
+C7 WR_Drive_0/BLB WR_Drive_0/BL 0.216f
+C8 WR_Drive_0/BLB WR_Drive_0/a_206_26# 0.20952f
+C9 WR_Drive_0/a_206_26# VDD 0.0945f
+C10 WR_Drive_0/BLB WR_Drive_0/a_26_104# 0.19764f
+C11 Y0 WR_Drive_0/BL 0.06048f
+C12 WR_Drive_0/BLB VDD 0.98928f
+C13 Senseamp_0/a_n14_52# WR_Drive_0/BL 0.12726f
+C14 WR_Drive_0/a_26_104# VDD 0.02808f
+C15 VDD VSS 0.22244p
+C16 WE VSS 14.4431f
+C17 DATA VSS 3.11721f
+C18 WR_Drive_0/a_206_26# VSS 8.26527f
+C19 WR_Drive_0/a_n66_126# VSS 12.073f
+C20 WR_Drive_0/a_26_104# VSS 14.10386f
+C21 SE VSS 6.69732f
+C22 OUT0 VSS 4.40916f
+C23 Senseamp_0/a_n28_6# VSS 4.90203f
+C24 Senseamp_0/a_64_16# VSS 3.93084f
+C25 Senseamp_0/a_n14_52# VSS 4.96611f
+C26 BLB0 VSS 2.1705f
+C27 BL1 VSS 2.1705f
+C28 BLB1 VSS 2.1705f
+C29 WR_Drive_0/BLB VSS 29.96712f
+C30 WR_Drive_0/BL VSS 24.06536f
+C31 BL0 VSS 2.04822f
+C32 Y0 VSS 12.9041f
+C33 Y0b VSS 12.7562f
+.ends
+
+.subckt inverter_layout IN VDD OUT VSS
+M1000 OUT IN VDD VDD pfet w=4.2u l=0.6u
++  ad=10.08p pd=13.2u as=10.08p ps=13.2u
+M1001 OUT IN VSS VSS nfet w=1.8u l=0.6u
++  ad=4.32p pd=8.4u as=4.32p ps=8.4u
+C0 VDD OUT 0.10044f
+C1 VDD IN 0.28602f
+C2 OUT VSS 1.78764f
+C3 IN VSS 0.92346f
+C4 VDD VSS 5.3397f
+.ends
+
+.subckt sram_cell_layout BLB VDD WL BL VSS
+M1000 Q WL BL VSS nfet w=1.8u l=0.6u
++  ad=5.67p pd=7.5u as=5.4p ps=9.6u
+M1001 Q QB VSS VSS nfet w=3.6u l=0.6u
++  ad=5.67p pd=7.5u as=8.64p ps=12u
+M1002 Q QB VDD VDD pfet w=3.6u l=0.6u
++  ad=8.64p pd=12u as=8.64p ps=12u
+M1003 VSS Q QB VSS nfet w=3.6u l=0.6u
++  ad=8.64p pd=12u as=5.67p ps=7.5u
+M1004 QB WL BLB VSS nfet w=1.8u l=0.6u
++  ad=5.67p pd=7.5u as=5.4p ps=9.6u
+M1005 VDD Q QB VDD pfet w=3.6u l=0.6u
++  ad=8.64p pd=12u as=8.64p ps=12u
+C0 Q VDD 0.20952f
+C1 VDD BLB 0.13176f
+C2 QB WL 0.0189f
+C3 BL WL 0.0837f
+C4 VDD QB 0.82728f
+C5 Q QB 0.11232f
+C6 QB BLB 0.71496f
+C7 VDD BL 0.13176f
+C8 Q BL 0.71496f
+C9 Q WL 0.0189f
+C10 WL BLB 0.0837f
+C11 BLB VSS 4.54845f
+C12 BL VSS 4.54845f
+C13 WL VSS 4.2618f
+C14 VDD VSS 12.6538f
+C15 Q VSS 3.36546f
+C16 QB VSS 2.7477f
+.ends
+
+.subckt sram_2x2_layout sram_cell_layout_1/WL sram_cell_layout_2/BL sram_cell_layout_0/BL
++ sram_cell_layout_3/WL sram_cell_layout_3/BL sram_cell_layout_3/VDD sram_cell_layout_1/BL
++ sram_cell_layout_3/VSS
+Xsram_cell_layout_0 sram_cell_layout_3/BL sram_cell_layout_3/VDD sram_cell_layout_1/WL
++ sram_cell_layout_0/BL sram_cell_layout_3/VSS sram_cell_layout
+Xsram_cell_layout_1 sram_cell_layout_2/BL sram_cell_layout_3/VDD sram_cell_layout_1/WL
++ sram_cell_layout_1/BL sram_cell_layout_3/VSS sram_cell_layout
+Xsram_cell_layout_2 sram_cell_layout_1/BL sram_cell_layout_3/VDD sram_cell_layout_3/WL
++ sram_cell_layout_2/BL sram_cell_layout_3/VSS sram_cell_layout
+Xsram_cell_layout_3 sram_cell_layout_0/BL sram_cell_layout_3/VDD sram_cell_layout_3/WL
++ sram_cell_layout_3/BL sram_cell_layout_3/VSS sram_cell_layout
+C0 sram_cell_layout_3/VDD sram_cell_layout_3/BL -0.11448f
+C1 sram_cell_layout_3/VDD sram_cell_layout_1/BL -0.11448f
+C2 sram_cell_layout_3/VDD sram_cell_layout_2/BL -0.11448f
+C3 sram_cell_layout_3/VDD sram_cell_layout_0/BL -0.11448f
+C4 sram_cell_layout_0/BL sram_cell_layout_3/VSS 8.1753f
+C5 sram_cell_layout_3/BL sram_cell_layout_3/VSS 8.1753f
+C6 sram_cell_layout_3/WL sram_cell_layout_3/VSS 9.01272f
+C7 sram_cell_layout_3/Q sram_cell_layout_3/VSS 3.36546f $ **FLOATING
+C8 sram_cell_layout_3/QB sram_cell_layout_3/VSS 2.7477f $ **FLOATING
+C9 sram_cell_layout_1/BL sram_cell_layout_3/VSS 8.1753f
+C10 sram_cell_layout_2/BL sram_cell_layout_3/VSS 8.1753f
+C11 sram_cell_layout_3/VDD sram_cell_layout_3/VSS 39.21088f
+C12 sram_cell_layout_2/Q sram_cell_layout_3/VSS 3.36546f $ **FLOATING
+C13 sram_cell_layout_2/QB sram_cell_layout_3/VSS 2.7477f $ **FLOATING
+C14 sram_cell_layout_1/WL sram_cell_layout_3/VSS 9.01272f
+C15 sram_cell_layout_1/Q sram_cell_layout_3/VSS 3.36546f $ **FLOATING
+C16 sram_cell_layout_1/QB sram_cell_layout_3/VSS 2.7477f $ **FLOATING
+C17 sram_cell_layout_0/Q sram_cell_layout_3/VSS 3.36546f $ **FLOATING
+C18 sram_cell_layout_0/QB sram_cell_layout_3/VSS 2.7477f $ **FLOATING
+.ends
+
+.subckt nand_layout A B VDD VSS OUT a_8_n66#
+M1000 a_8_n66# A VSS VSS nfet w=3.6u l=0.6u
++  ad=6.48p pd=7.2u as=9.72p ps=12.6u
+M1001 VDD B OUT VDD pfet w=4.2u l=0.6u
++  ad=11.34p pd=13.8u as=7.56p ps=7.8u
+M1002 OUT A VDD VDD pfet w=4.2u l=0.6u
++  ad=7.56p pd=7.8u as=11.34p ps=13.8u
+M1003 OUT B a_8_n66# VSS nfet w=3.6u l=0.6u
++  ad=9.72p pd=12.6u as=6.48p ps=7.2u
+C0 B VDD 0.12672f
+C1 B OUT 0.05616f
+C2 A B 0.05616f
+C3 VDD OUT 0.20088f
+C4 A VDD 0.24687f
+C5 OUT VSS 3.32634f
+C6 B VSS 2.0139f
+C7 A VSS 1.07127f
+C8 VDD VSS 8.21868f
+.ends
+
+.subckt row_decoder_layout IN EN VDD VSS OUT OUT_B
+Xinverter_layout_0 IN VDD nand_layout_1/A VSS inverter_layout
+Xinverter_layout_1 nand_layout_1/A VDD nand_layout_0/A VSS inverter_layout
+Xinverter_layout_2 nand_layout_0/OUT VDD OUT VSS inverter_layout
+Xinverter_layout_3 nand_layout_1/OUT VDD OUT_B VSS inverter_layout
+Xnand_layout_0 nand_layout_0/A EN VDD VSS nand_layout_0/OUT nand_layout_0/a_8_n66#
++ nand_layout
+Xnand_layout_1 nand_layout_1/A EN VDD VSS nand_layout_1/OUT nand_layout_1/a_8_n66#
++ nand_layout
+C0 EN nand_layout_1/OUT 0.28872f
+C1 nand_layout_0/A VDD 0.11718f
+C2 OUT VDD 0.05022f
+C3 nand_layout_0/OUT VDD 0.19764f
+C4 nand_layout_1/A EN 0.0972f
+C5 EN VDD 0.19224f
+C6 EN nand_layout_0/a_8_n66# 0.10368f
+C7 nand_layout_1/OUT VDD 0.10044f
+C8 IN VDD 0.05022f
+C9 OUT_B VDD 0.05022f
+C10 nand_layout_1/A VDD 0.31806f
+C11 VDD VSS 49.28869f
+C12 nand_layout_1/OUT VSS 4.61664f
+C13 EN VSS 11.94798f
+C14 nand_layout_1/A VSS 12.62769f
+C15 nand_layout_0/OUT VSS 4.61664f
+C16 nand_layout_0/A VSS 3.33129f
+C17 OUT_B VSS 2.10426f
+C18 OUT VSS 2.10426f
+C19 IN VSS 1.24008f
+.ends
+
+.subckt sram_top_module VDD RA WE VSS RAS SAE OUT PRE DATA CA
+Xcombined_0 WE DATA VSS SAE OUT combined_0/BL0 combined_0/BL1 combined_0/BLB0 combined_0/BLB1
++ combined_0/WR_Drive_0/BL combined_0/Y0 combined_0/WR_Drive_0/BLB VDD CA combined
+Xinverter_layout_0 CA VDD combined_0/Y0 VSS inverter_layout
+Xsram_2x2_layout_0 row_decoder_layout_0/OUT_B combined_0/BL0 combined_0/BLB1 row_decoder_layout_0/OUT
++ combined_0/BL1 VDD combined_0/BLB0 VSS sram_2x2_layout
+Xrow_decoder_layout_0 RA RAS VDD VSS row_decoder_layout_0/OUT row_decoder_layout_0/OUT_B
++ row_decoder_layout
+M1000 combined_0/BLB0 PRE VDD VDD pfet w=7.2u l=0.6u
++  ad=15.12p pd=18.6u as=16.2p ps=11.7u
+M1001 VDD PRE combined_0/BL1 VDD pfet w=7.2u l=0.6u
++  ad=16.2p pd=11.7u as=15.12p ps=18.6u
+M1002 VDD PRE combined_0/BL0 VDD pfet w=7.2u l=0.6u
++  ad=16.2p pd=11.7u as=15.12p ps=18.6u
+M1003 combined_0/BLB1 PRE VDD VDD pfet w=7.2u l=0.6u
++  ad=15.12p pd=18.6u as=16.2p ps=11.7u
+M1004 combined_0/BLB0 PRE combined_0/BL0 VDD pfet w=7.2u l=0.6u
++  ad=32.4p pd=23.4u as=34.56001p ps=24u
+M1005 combined_0/BLB1 PRE combined_0/BL1 VDD pfet w=7.2u l=0.6u
++  ad=32.4p pd=23.4u as=34.56001p ps=24u
+C0 combined_0/BLB1 combined_0/BLB0 0.4536f
+C1 combined_0/BLB0 PRE 0.05616f
+C2 CA combined_0/WR_Drive_0/BL 0.01296f
+C3 row_decoder_layout_0/OUT VDD 0
+C4 combined_0/BL1 VDD 0.33057f
+C5 combined_0/BL1 combined_0/BL0 0.01296f
+C6 combined_0/Y0 VDD 0.05778f
+C7 CA VDD 0.07452f
+C8 combined_0/BL1 combined_0/BLB0 0.41472f
+C9 combined_0/BL0 VDD 0.387f
+C10 combined_0/BL1 PRE 0.05616f
+C11 combined_0/BLB0 VDD 0.40977f
+C12 combined_0/BLB1 VDD 0.54153f
+C13 combined_0/WR_Drive_0/BLB combined_0/Y0 0.08406f
+C14 PRE VDD 2.44476f
+C15 combined_0/WR_Drive_0/BLB CA 0.06156f
+C16 combined_0/WR_Drive_0/BLB VDD 0.1269f
+C17 PRE VSS 0.7992f
+C18 VDD VSS 0.38157p
+C19 row_decoder_layout_0/nand_layout_1/OUT VSS 4.61664f
+C20 RAS VSS 12.01422f
+C21 row_decoder_layout_0/nand_layout_1/A VSS 12.53049f
+C22 row_decoder_layout_0/nand_layout_0/OUT VSS 4.61664f
+C23 row_decoder_layout_0/nand_layout_0/A VSS 3.33129f
+C24 RA VSS 1.60692f
+C25 row_decoder_layout_0/OUT VSS 11.39502f
+C26 sram_2x2_layout_0/sram_cell_layout_3/Q VSS 3.36546f $ **FLOATING
+C27 sram_2x2_layout_0/sram_cell_layout_3/QB VSS 2.7477f $ **FLOATING
+C28 sram_2x2_layout_0/sram_cell_layout_2/Q VSS 3.36546f $ **FLOATING
+C29 sram_2x2_layout_0/sram_cell_layout_2/QB VSS 2.7477f $ **FLOATING
+C30 row_decoder_layout_0/OUT_B VSS 12.59016f
+C31 sram_2x2_layout_0/sram_cell_layout_1/Q VSS 3.36546f $ **FLOATING
+C32 sram_2x2_layout_0/sram_cell_layout_1/QB VSS 2.7477f $ **FLOATING
+C33 sram_2x2_layout_0/sram_cell_layout_0/Q VSS 3.36546f $ **FLOATING
+C34 sram_2x2_layout_0/sram_cell_layout_0/QB VSS 2.7477f $ **FLOATING
+C35 WE VSS 14.80994f
+C36 DATA VSS 3.28389f
+C37 combined_0/WR_Drive_0/a_206_26# VSS 8.07627f
+C38 combined_0/WR_Drive_0/a_n66_126# VSS 12.073f
+C39 combined_0/WR_Drive_0/a_26_104# VSS 14.0477f
+C40 SAE VSS 6.76707f
+C41 OUT VSS 4.64256f
+C42 combined_0/Senseamp_0/a_n28_6# VSS 4.90203f
+C43 combined_0/Senseamp_0/a_64_16# VSS 3.93084f
+C44 combined_0/Senseamp_0/a_n14_52# VSS 4.96611f
+C45 combined_0/BLB0 VSS 21.51416f
+C46 combined_0/BL1 VSS 19.4636f
+C47 combined_0/BLB1 VSS 22.82361f
+C48 combined_0/WR_Drive_0/BLB VSS 29.93472f
+C49 combined_0/WR_Drive_0/BL VSS 23.8121f
+C50 combined_0/BL0 VSS 23.52222f
+C51 combined_0/Y0 VSS 17.00525f
+C52 CA VSS 16.87934f
+.ends
+

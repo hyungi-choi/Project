@@ -1,0 +1,93 @@
+timestamp 1772180367
+version 8.3
+tech scmos
+style AMI0.5um(amic5)from:T11Z
+scale 1000 1 15
+resistclasses 82400 102700 816000 816000 1 22300 41300 41300 90 90 60
+use nand_layout nand_layout_1 1 0 164 0 1 -110
+use nand_layout nand_layout_0 1 0 164 0 1 56
+use inverter_layout inverter_layout_3 1 0 230 0 1 -56
+use inverter_layout inverter_layout_2 1 0 230 0 1 110
+use inverter_layout inverter_layout_1 1 0 78 0 1 110
+use inverter_layout inverter_layout_0 1 0 -18 0 1 110
+port "OUT_B" 6 278 -128 290 -116 m1
+port "EN" 2 -18 -52 -6 -40 m2
+port "VSS" 4 132 -212 144 -200 m1
+port "OUT" 5 278 38 290 50 m1
+port "IN" 1 -18 38 -6 50 m1
+port "VDD" 3 132 108 144 120 m1
+node "m1_218_n200#" 0 2039.46 218 -200 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 696 140 0 0 0 0
+node "OUT_B" 0 1000.08 278 -128 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 288 72 0 0 0 0
+node "m1_218_n128#" 0 1000.08 218 -128 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 288 72 0 0 0 0
+node "m1_218_n34#" 0 2039.46 218 -34 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 696 140 0 0 0 0
+node "EN" 3 9572.46 -18 -52 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 392 112 4520 776 0 0
+node "m1_16_n2#" 2 5784.48 16 -2 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1088 228 1376 252 0 0
+node "VSS" 3 11271.6 132 -212 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4320 744 0 0 0 0
+node "OUT" 0 1000.08 278 38 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 288 72 0 0 0 0
+node "m1_218_38#" 0 1000.08 218 38 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 288 72 0 0 0 0
+node "m1_126_38#" 0 1057.95 126 38 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 360 84 0 0 0 0
+node "m1_30_38#" 2 9797.7 30 38 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3840 664 0 0 0 0
+node "IN" 0 633.24 -18 38 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 144 48 0 0 0 0
+node "VDD" 4 13226.1 132 108 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4352 772 2216 392 0 0
+node "w_138_n70#" 8745 1979.64 138 -70 nw 0 0 0 0 2256 340 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n18_50#" 5286 14524.4 -18 50 nw 0 0 0 0 16552 756 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "w_n1073741817_n1073741817#" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "w_138_n70#" "VDD" 287.91
+cap "w_n18_50#" "VDD" 2054.07
+cap "m1_16_n2#" "m1_30_38#" 97.2
+cap "VDD" "m1_218_38#" 97.2
+cap "EN" "VSS" 97.2
+cap "m1_126_38#" "w_n18_50#" 125.55
+cap "EN" "w_138_n70#" 77.76
+cap "EN" "m1_30_38#" 97.2
+cap "w_n18_50#" "m1_30_38#" 251.1
+cap "m1_218_n34#" "VDD" 97.2
+cap "nand_layout_1/A" "nand_layout_1/B" 1.42109e-14
+cap "nand_layout_1/B" "nand_layout_1/VSS" 64.8
+cap "nand_layout_1/B" "nand_layout_1/VDD" 82.08
+cap "nand_layout_1/B" "nand_layout_1/OUT" 164.52
+cap "nand_layout_1/A" "nand_layout_1/VDD" 66.96
+cap "nand_layout_1/OUT" "nand_layout_1/B" 124.2
+cap "nand_layout_1/VSS" "nand_layout_1/B" 32.4
+cap "nand_layout_1/VDD" "inverter_layout_3/OUT" 50.22
+cap "nand_layout_1/VDD" "nand_layout_1/OUT" 100.44
+cap "nand_layout_1/VDD" "nand_layout_1/B" 32.4
+cap "nand_layout_0/a_8_n66#" "nand_layout_0/B" 69.12
+cap "nand_layout_0/VDD" "inverter_layout_0/IN" 50.22
+cap "nand_layout_0/VDD" "inverter_layout_1/IN" -8.52651e-14
+cap "nand_layout_0/VDD" "nand_layout_0/A" -8.37
+cap "nand_layout_0/B" "nand_layout_0/a_8_n66#" 34.56
+cap "inverter_layout_2/OUT" "nand_layout_0/VDD" 50.22
+cap "nand_layout_0/OUT" "nand_layout_0/VDD" 100.44
+merge "inverter_layout_2/IN" "nand_layout_0/OUT" -633.24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -48 0 0 0 0
+merge "nand_layout_0/OUT" "m1_218_38#"
+merge "inverter_layout_3/OUT" "OUT_B" -683.46 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -144 -48 0 0 0 0
+merge "inverter_layout_3/IN" "nand_layout_1/OUT" -633.24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -48 0 0 0 0
+merge "nand_layout_1/OUT" "m1_218_n128#"
+merge "inverter_layout_0/IN" "IN" -316.62 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 0 0 0 0
+merge "inverter_layout_2/VDD" "inverter_layout_0/VDD" -18334.8 0 0 0 0 -12016 -1480 0 0 0 0 0 0 0 0 0 0 -1992 -540 0 0 0 0
+merge "inverter_layout_0/VDD" "inverter_layout_1/VDD"
+merge "inverter_layout_1/VDD" "nand_layout_0/VDD"
+merge "nand_layout_0/VDD" "w_n18_50#"
+merge "w_n18_50#" "inverter_layout_3/VDD"
+merge "inverter_layout_3/VDD" "nand_layout_1/VDD"
+merge "nand_layout_1/VDD" "VDD"
+merge "VDD" "w_138_n70#"
+merge "inverter_layout_2/VSS" "inverter_layout_3/VSS" -3635.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -408 -284 0 0 0 0
+merge "inverter_layout_3/VSS" "inverter_layout_0/VSS"
+merge "inverter_layout_0/VSS" "m1_218_n34#"
+merge "m1_218_n34#" "m1_218_n200#"
+merge "m1_218_n200#" "inverter_layout_1/VSS"
+merge "inverter_layout_1/VSS" "nand_layout_0/VSS"
+merge "nand_layout_0/VSS" "m1_16_n2#"
+merge "m1_16_n2#" "nand_layout_1/VSS"
+merge "nand_layout_1/VSS" "w_n1073741817_n1073741817#"
+merge "w_n1073741817_n1073741817#" "VSS"
+merge "inverter_layout_0/OUT" "inverter_layout_1/IN" -1049.58 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -72 -84 0 0 0 0
+merge "inverter_layout_1/IN" "nand_layout_1/A"
+merge "nand_layout_1/A" "m1_30_38#"
+merge "nand_layout_0/B" "nand_layout_1/B" -1846.68 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -336 -104 0 0 0 0
+merge "nand_layout_1/B" "EN"
+merge "inverter_layout_2/OUT" "OUT" -683.46 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -144 -48 0 0 0 0
+merge "inverter_layout_1/OUT" "nand_layout_0/A" -585.57 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 -52 0 0 0 0
+merge "nand_layout_0/A" "m1_126_38#"

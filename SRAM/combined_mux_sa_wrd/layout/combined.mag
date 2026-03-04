@@ -1,0 +1,89 @@
+magic
+tech scmos
+timestamp 1772623303
+<< metal1 >>
+rect -89 119 4 120
+rect -89 117 7 119
+rect -89 62 -82 117
+rect 130 78 133 79
+rect 4 66 14 72
+rect 210 75 216 76
+rect 94 64 99 65
+rect -114 60 -108 61
+rect 127 30 133 31
+rect 210 30 216 31
+rect 57 12 62 13
+rect 64 3 74 6
+rect -234 -9 -228 -8
+rect -138 -19 -134 -18
+rect 64 -75 69 3
+rect 221 -75 233 73
+rect -147 -81 -141 -80
+rect -94 -81 233 -75
+<< m2contact >>
+rect 72 118 79 125
+rect 168 76 175 83
+rect -3 66 4 73
+rect 41 69 48 76
+rect -178 42 -171 49
+rect -18 -5 -11 2
+<< metal2 >>
+rect 79 122 173 125
+rect 73 117 77 118
+rect 152 114 155 115
+rect 170 83 173 122
+rect 188 114 191 115
+rect 21 69 41 76
+rect -3 49 3 66
+rect -171 43 3 49
+rect 21 2 26 69
+rect -11 -5 26 2
+<< m3contact >>
+rect -3 66 4 73
+rect 4 66 5 73
+rect 41 69 48 76
+<< metal3 >>
+rect 48 69 56 76
+rect -3 -24 3 66
+rect 51 7 56 69
+rect 51 3 166 7
+rect 177 -24 181 3
+rect -3 -30 181 -24
+use MUX1  MUX1_0
+timestamp 1772370654
+transform 1 0 126 0 1 53
+box 1 -50 103 64
+use Senseamp  Senseamp_0
+timestamp 1772619499
+transform 1 0 21 0 1 54
+box -21 -54 83 72
+use WR_Drive  WR_Drive_0
+timestamp 1772618348
+transform 1 0 -182 0 1 -97
+box -52 9 176 299
+<< labels >>
+rlabel metal1 -234 -9 -228 -8 0 WE
+port 3 nsew
+rlabel metal1 -114 60 -108 61 0 VDD
+port 4 nsew
+rlabel metal1 -138 -19 -134 -18 0 DATA
+port 5 nsew
+rlabel metal1 -147 -81 -141 -80 0 VSS
+port 6 nsew
+rlabel metal1 57 12 62 13 0 SE
+port 9 nsew
+rlabel metal1 94 64 99 65 0 OUT0
+port 10 nsew
+rlabel metal2 152 114 155 115 0 Y0
+port 11 nsew
+rlabel metal2 188 114 191 115 0 Y0b
+port 12 nsew
+rlabel metal1 130 78 133 79 0 BL0
+port 13 nsew
+rlabel metal1 127 30 133 31 0 BL1
+port 14 nsew
+rlabel metal1 210 30 216 31 0 BLB0
+port 15 nsew
+rlabel metal1 210 75 216 76 0 BLB1
+port 16 nsew
+<< end >>

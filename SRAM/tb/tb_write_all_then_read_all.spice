@@ -1,0 +1,61 @@
+*============================================================
+* TB: write all 4 cells first, then read all 4 cells
+* DUT: .subckt sram_top_module_schematic OUT SAE VDD PRE RA WE VSS DATA RAS CA
+* Total sim: 2us (0~1us: writes, 1~2us: reads)
+* Write pattern: (RA,CA,DATA) = (0,0,1),(0,1,0),(1,0,1),(1,1,0)
+* Read order: same RA/CA sequence after all writes
+* PRE=0 -> precharge ON (PFET), PRE=1 -> OFF
+*============================================================
+
+.option post
+.temp 27
+
+.include ../top_module/layout/sram_top_module.spice
+*.include ../top_module/schematic/sram_top_module_schematic.spice
+.include ~/ETRI050_DesignKit/tech/05cmos_model_240201.lib
+
+VDD VDD 0 1.2
+VSS VSS 0 0
+
+VPRE PRE 0 pwl(0n 0.0 49.999n 0.0 50n 1.2 149.999n 1.2 150n 0.0 299.999n 0.0 300n 1.2 399.999n 1.2 400n 0.0 549.999n 0.0 550n 1.2 649.999n 1.2 650n 0.0 799.999n 0.0 800n 1.2 899.999n 1.2 900n 0.0 1049.999n 0.0 1050n 1.2 1149.999n 1.2 1150n 0.0 1299.999n 0.0 1300n 1.2 1399.999n 1.2 1400n 0.0 1549.999n 0.0 1550n 1.2 1649.999n 1.2 1650n 0.0 1799.999n 0.0 1800n 1.2 1899.999n 1.2 1900n 0.0)
+VRAS RAS 0 pwl(0n 0.0 49.999n 0.0 50n 1.2 149.999n 1.2 150n 0.0 299.999n 0.0 300n 1.2 399.999n 1.2 400n 0.0 549.999n 0.0 550n 1.2 649.999n 1.2 650n 0.0 799.999n 0.0 800n 1.2 899.999n 1.2 900n 0.0 1049.999n 0.0 1050n 1.2 1149.999n 1.2 1150n 0.0 1299.999n 0.0 1300n 1.2 1399.999n 1.2 1400n 0.0 1549.999n 0.0 1550n 1.2 1649.999n 1.2 1650n 0.0 1799.999n 0.0 1800n 1.2 1899.999n 1.2 1900n 0.0)
+VWE WE 0 pwl(0n 0.0 49.999n 0.0 50n 1.2 149.999n 1.2 150n 0.0 299.999n 0.0 300n 1.2 399.999n 1.2 400n 0.0 549.999n 0.0 550n 1.2 649.999n 1.2 650n 0.0 799.999n 0.0 800n 1.2 899.999n 1.2 900n 0.0 1049.999n 0.0 1150n 0.0 1299.999n 0.0 1400n 0.0 1549.999n 0.0 1650n 0.0 1799.999n 0.0 1900n 0.0)
+VSAE SAE 0 pwl(0n 0.0 120n 0.0 370n 0.0 620n 0.0 870n 0.0 1119.999n 0.0 1120n 1.2 1149.999n 1.2 1150n 0.0 1369.999n 0.0 1370n 1.2 1399.999n 1.2 1400n 0.0 1619.999n 0.0 1620n 1.2 1649.999n 1.2 1650n 0.0 1869.999n 0.0 1870n 1.2 1899.999n 1.2 1900n 0.0)
+VRA RA 0 pwl(0n 0.0 499.999n 0.0 500n 1.2 999.999n 1.2 1000n 0.0 1499.999n 0.0 1500n 1.2 2000n 1.2)
+VCA CA 0 pwl(0n 0.0 249.999n 0.0 250n 1.2 499.999n 1.2 500n 0.0 749.999n 0.0 750n 1.2 999.999n 1.2 1000n 0.0 1249.999n 0.0 1250n 1.2 1499.999n 1.2 1500n 0.0 1749.999n 0.0 1750n 1.2 2000n 1.2)
+VDATA DATA 0 pwl(0n 1.2 249.999n 1.2 250n 0.0 499.999n 0.0 500n 1.2 749.999n 1.2 750n 0.0 2000n 0.0)
+
+* DUT instantiation (PORT ORDER MUST MATCH .subckt)
+XDUT VDD RA WE VSS RAS SAE OUT PRE DATA CA sram_top_module
+
+COUT OUT 0 10f
+
+.save v(OUT) v(PRE) v(RAS) v(WE) v(SAE) v(RA) v(CA) v(DATA)
+.save v(xdut.wl_0) v(xdut.wl_1) v(xdut.bl_0) v(xdut.blb_0) v(xdut.bl_1) v(xdut.blb_1) v(xdut.cab)
+.save v(xdut.x5.mux_out) v(xdut.x5.mux_outb)
+* row0 col0 (WL_0 + BL_0/BLB_0) : sram_2x2_schematic의 X1
+*.save v(xdut.x2.x1.q)  v(xdut.x2.x1.qb)
+
+* row0 col1 (WL_0 + BL_1/BLB_1) : X2
+*.save v(xdut.x2.x2.q)  v(xdut.x2.x2.qb)
+
+* row1 col0 (WL_1 + BL_0/BLB_0) : X3
+*.save v(xdut.x2.x3.q)  v(xdut.x2.x3.qb)
+
+* row1 col1 (WL_1 + BL_1/BLB_1) : X4
+*.save v(xdut.x2.x4.q)  v(xdut.x2.x4.qb)
+.save all
+*.save v(xdut.sram_2x2_layout_0/sram_cell_layout_0/q) v(xdut.sram_2x2_layout_0/sram_cell_layout_0/qb)
+*.save v(xdut.sram_2x2_layout_0/sram_cell_layout_1/q) v(xdut.sram_2x2_layout_0/sram_cell_layout_1/qb)
+*.save v(xdut.sram_2x2_layout_0/sram_cell_layout_2/q) v(xdut.sram_2x2_layout_0/sram_cell_layout_2/qb)
+*.save v(xdut.sram_2x2_layout_0/sram_cell_layout_3/q) v(xdut.sram_2x2_layout_0/sram_cell_layout_3/qb)
+
+
+* Measurements during read slots (SAE high windows)
+.meas tran OUT_R00_AVG avg v(OUT) from=1120n to=1150n
+.meas tran OUT_R01_AVG avg v(OUT) from=1370n to=1400n
+.meas tran OUT_R10_AVG avg v(OUT) from=1620n to=1650n
+.meas tran OUT_R11_AVG avg v(OUT) from=1870n to=1900n
+
+.tran 0.1n 2u
+.end

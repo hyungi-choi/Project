@@ -1,0 +1,103 @@
+timestamp 1772623303
+version 8.3
+tech scmos
+style AMI0.5um(amic5)from:T11Z
+scale 1000 1 15
+resistclasses 82400 102700 816000 816000 1 22300 41300 41300 90 90 60
+use WR_Drive WR_Drive_0 1 0 -364 0 1 -194
+use Senseamp Senseamp_0 1 0 42 0 1 108
+use MUX1 MUX1_0 1 0 252 0 1 106
+port "Y0b" 12 376 228 382 230 m2
+port "Y0" 11 304 228 310 230 m2
+port "VSS" 6 -294 -162 -282 -160 m1
+port "DATA" 5 -276 -38 -268 -36 m1
+port "WE" 3 -468 -18 -456 -16 m1
+port "SE" 9 114 24 124 26 m1
+port "BLB0" 15 420 60 432 62 m1
+port "BL1" 14 254 60 266 62 m1
+port "VDD" 4 -228 120 -216 122 m1
+port "OUT0" 10 188 128 198 130 m1
+port "BLB1" 16 420 150 432 152 m1
+port "BL0" 13 260 156 266 158 m1
+node "Y0b" 0 143.52 376 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12 16 0 0
+node "Y0" 0 143.52 304 228 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12 16 0 0
+node "VSS" 1 327.54 -294 -162 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 28 0 0 0 0
+node "DATA" 0 233.16 -276 -38 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16 20 0 0 0 0
+node "WE" 1 327.54 -468 -18 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 28 0 0 0 0
+node "m1_n188_n162#" 7 36775.6 -188 -162 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16632 2268 0 0 0 0
+node "SE" 0 280.35 114 24 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20 24 0 0 0 0
+node "BLB0" 1 327.54 420 60 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 28 0 0 0 0
+node "BL1" 1 327.54 254 60 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 28 0 0 0 0
+node "VDD" 1 327.54 -228 120 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 28 0 0 0 0
+node "OUT0" 0 280.35 188 128 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20 24 0 0 0 0
+node "BLB1" 1 327.54 420 150 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24 28 0 0 0 0
+node "m1_n36_n10#" 5 12920 -36 -10 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 392 112 3328 588 3500 792
+node "m1_n356_84#" 7 19819.5 -356 84 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 632 152 5004 856 7232 1264
+node "BL0" 0 185.97 260 156 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12 16 0 0 0 0
+node "m1_144_236#" 5 7630.14 144 236 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 392 112 2004 636 0 0
+node "m1_n178_124#" 3 8706.9 -178 124 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2680 616 0 0 0 0
+substrate "w_n1073741817_n1073741817#" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m1_n356_84#" "m1_n36_n10#" 120.96
+cap "m1_n188_n162#" "m1_n36_n10#" 32.4
+cap "m1_n188_n162#" "m1_n356_84#" 32.4
+cap "WR_Drive_0/a_26_104#" "WR_Drive_0/VSS" 56.16
+cap "WR_Drive_0/a_206_26#" "WR_Drive_0/VSS" 189
+cap "m1_n36_n10#" "Senseamp_0/SE" 10.8
+cap "m1_n36_n10#" "Senseamp_0/VSS" 42.12
+cap "WR_Drive_0/BL" "Senseamp_0/VSS" 40.5
+cap "MUX1_0/MUX_OUT" "Senseamp_0/VSS" 14.04
+cap "MUX1_0/MUX_OUT" "MUX1_0/Y0" 60.48
+cap "WR_Drive_0/VDD" "WR_Drive_0/BLB" 97.2
+cap "WR_Drive_0/DATA" "WR_Drive_0/BLB" 16.2
+cap "WR_Drive_0/VDD" "WR_Drive_0/BLB" 103.68
+cap "WR_Drive_0/BLB" "WR_Drive_0/BLB" 30.69
+cap "WR_Drive_0/VDD" "WR_Drive_0/BLB" 25.92
+cap "WR_Drive_0/a_26_104#" "WR_Drive_0/BLB" 95.04
+cap "WR_Drive_0/a_n66_126#" "WR_Drive_0/BLB" 16.2
+cap "WR_Drive_0/a_26_104#" "m1_n356_84#" 86.4
+cap "WR_Drive_0/VDD" "m1_n356_84#" 676.08
+cap "WR_Drive_0/a_206_26#" "m1_n356_84#" 152.28
+cap "WR_Drive_0/a_26_104#" "m1_n356_84#" 16.2
+cap "Senseamp_0/a_n14_52#" "Senseamp_0/BL" 127.26
+cap "Senseamp_0/BLB" "WR_Drive_0/BL" 95.04
+cap "Senseamp_0/BLB" "WR_Drive_0/VDD" 86.4
+cap "Senseamp_0/VSS" "Senseamp_0/BL" 124.2
+cap "Senseamp_0/a_n28_6#" "Senseamp_0/BL" 40.5
+cap "Senseamp_0/BLB" "WR_Drive_0/a_206_26#" 57.24
+cap "Senseamp_0/SE" "Senseamp_0/BL" 21.6
+cap "Senseamp_0/BLB" "WR_Drive_0/a_n66_126#" 16.2
+cap "Senseamp_0/a_64_16#" "Senseamp_0/BL" 11.88
+cap "MUX1_0/VDD" "MUX1_0/Y0B" 24.3
+cap "MUX1_0/Y0" "MUX1_0/VDD" 24.3
+cap "m1_n178_124#" "WR_Drive_0/a_206_26#" 94.5
+cap "m1_n178_124#" "WR_Drive_0/VDD" 284.58
+cap "m1_n178_124#" "WR_Drive_0/VDD" 195.3
+cap "m1_n178_124#" "WR_Drive_0/a_26_104#" 28.08
+cap "Senseamp_0/VDD" "WR_Drive_0/VDD" 234.36
+cap "Senseamp_0/VDD" "Senseamp_0/VDD" 216.81
+merge "MUX1_0/BLB0" "BLB0" -327.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
+merge "Senseamp_0/SE" "SE" -391.35 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -20 -34 0 0 0 0
+merge "MUX1_0/BLB1" "BLB1" -327.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
+merge "MUX1_0/Y0B" "Y0b" -143.52 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 -16 0 0
+merge "MUX1_0/VDD" "Senseamp_0/VDD" -7538.07 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1152 -408 -204 -68 0 0
+merge "Senseamp_0/VDD" "m1_144_236#"
+merge "m1_144_236#" "WR_Drive_0/VDD"
+merge "WR_Drive_0/VDD" "VDD"
+merge "VDD" "m1_n178_124#"
+merge "MUX1_0/VSS" "Senseamp_0/VSS" -4177.41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1252 -266 0 0 0 0
+merge "Senseamp_0/VSS" "WR_Drive_0/VSS"
+merge "WR_Drive_0/VSS" "m1_n188_n162#"
+merge "m1_n188_n162#" "w_n1073741817_n1073741817#"
+merge "w_n1073741817_n1073741817#" "VSS"
+merge "Senseamp_0/BL" "MUX1_0/MUX_OUT" -2295.12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -216 -96 0 0 -404 -118
+merge "MUX1_0/MUX_OUT" "WR_Drive_0/BL"
+merge "WR_Drive_0/BL" "m1_n36_n10#"
+merge "WR_Drive_0/DATA" "DATA" -255.36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 -22 0 0 0 0
+merge "MUX1_0/BL0" "BL0" -185.97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 -16 0 0 0 0
+merge "MUX1_0/BL1" "BL1" -327.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
+merge "Senseamp_0/BLB" "WR_Drive_0/BLB" -6335.31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -312 -100 -2400 -400 0 -16
+merge "WR_Drive_0/BLB" "MUX1_0/MUX_OUTB"
+merge "MUX1_0/MUX_OUTB" "m1_n356_84#"
+merge "WR_Drive_0/WE" "WE" -327.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
+merge "Senseamp_0/OUT0" "OUT0" -280.35 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -20 -24 0 0 0 0
+merge "MUX1_0/Y0" "Y0" -143.52 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 -16 0 0

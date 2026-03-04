@@ -1,0 +1,25 @@
+* expanding   symbol:  sram_cell_schematic.sym # of pins=5
+.subckt sram_cell_schematic WL BL BLB VDD VSS
+*.ipin WL
+*.iopin BL
+*.iopin BLB
+*.iopin VDD
+*.iopin VSS
+M4 VSS Q QB VSS nfet w=3.6u l=0.6u m=1
+M5 QB Q VDD VDD pfet w=3.6u l=0.6u m=1
+M6 Q QB VDD VDD pfet w=3.6u l=0.6u m=1
+M1 Q WL BL VSS nfet w=1.8u l=0.6u m=1
+M3 VSS QB Q VSS nfet w=3.6u l=0.6u m=1
+M2 BLB WL QB VSS nfet w=1.8u l=0.6u m=1
+.ends
+
+.subckt sram_2x2_schematic VDD WL_0 WL_1 GND BL_0 BLB_0 BLB_1 BL_1
+X1 WL_0 BL_0 BLB_0 VDD GND sram_cell_schematic
+X2 WL_0 BL_1 BLB_1 VDD GND sram_cell_schematic
+X3 WL_1 BL_0 BLB_0 VDD GND sram_cell_schematic
+X4 WL_1 BL_1 BLB_1 VDD GND sram_cell_schematic
+.ends
+
+.GLOBAL VDD
+.GLOBAL GND
+.end

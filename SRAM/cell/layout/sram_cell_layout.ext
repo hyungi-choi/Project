@@ -1,0 +1,35 @@
+timestamp 1771489234
+version 8.3
+tech scmos
+style AMI0.5um(amic5)from:T11Z
+scale 1000 1 15
+resistclasses 82400 102700 816000 816000 1 22300 41300 41300 90 90 60
+port "BLB" 7 26 54 38 64 m2
+port "BL" 11 -30 54 -18 64 m2
+port "WL" 9 -60 -66 68 -58 m1
+port "VDD" 8 -66 40 74 52 m1
+port "VSS" 10 -54 -136 62 -124 m2
+node "BLB" 139 4548.45 26 54 m2 240 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 412 92 2116 376 0 0
+node "BL" 139 4548.45 -30 54 m2 240 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 412 92 2116 376 0 0
+node "WL" 409 4261.8 -60 -66 m1 0 0 0 0 0 0 0 0 0 0 416 184 0 0 0 0 1072 280 0 0 0 0
+node "Q" 1229 3365.46 -34 -50 ndif 504 100 384 80 0 0 0 0 0 0 744 348 0 0 0 0 1080 204 0 0 0 0
+node "QB" 1229 2747.7 -38 -56 p 504 100 384 80 0 0 0 0 0 0 744 348 0 0 0 0 1080 204 0 0 0 0
+node "VDD" 2758 12653.8 -66 40 m1 144 48 768 160 7840 392 0 0 0 0 0 0 0 0 0 0 2544 448 0 0 0 0
+substrate "VSS" 0 0 -54 -136 m2 768 160 224 60 0 0 0 0 0 0 0 0 0 0 0 0 1416 296 6184 1044 0 0
+cap "QB" "WL" 18.9
+cap "WL" "BLB" 83.7
+cap "QB" "VDD" 827.28
+cap "BLB" "VDD" 131.76
+cap "WL" "BL" 83.7
+cap "BL" "VDD" 131.76
+cap "Q" "WL" 18.9
+cap "Q" "VDD" 209.52
+cap "QB" "BLB" 714.96
+cap "Q" "QB" 112.32
+cap "Q" "BL" 714.96
+device mosfet nfet 26 -64 27 -63 4 12 "VSS" "WL" 8 0 "BLB" 12 240,64 "QB" 12 252,50
+device mosfet nfet -30 -64 -29 -63 4 12 "VSS" "WL" 8 0 "BL" 12 240,64 "Q" 12 252,50
+device mosfet nfet 42 -50 43 -49 4 24 "VSS" "Q" 8 0 "QB" 24 252,50 "VSS" 24 384,80
+device mosfet nfet -38 -50 -37 -49 4 24 "VSS" "QB" 8 0 "VSS" 24 384,80 "Q" 24 252,50
+device mosfet pfet 42 10 43 11 4 24 "VDD" "Q" 8 0 "QB" 24 384,80 "VDD" 24 384,80
+device mosfet pfet -38 10 -37 11 4 24 "VDD" "QB" 8 0 "VDD" 24 384,80 "Q" 24 384,80

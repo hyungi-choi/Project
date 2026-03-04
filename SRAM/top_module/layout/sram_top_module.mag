@@ -1,0 +1,165 @@
+magic
+tech scmos
+timestamp 1772623653
+<< nwell >>
+rect 13 196 127 284
+<< ptransistor >>
+rect 26 239 28 263
+rect 43 239 45 263
+rect 95 239 97 263
+rect 112 239 114 263
+rect 35 204 37 228
+rect 104 204 106 228
+<< pdiffusion >>
+rect 25 239 26 263
+rect 28 239 29 263
+rect 35 239 43 263
+rect 45 239 46 263
+rect 94 239 95 263
+rect 97 239 105 263
+rect 111 239 112 263
+rect 114 239 115 263
+rect 25 204 35 228
+rect 37 204 46 228
+rect 94 204 104 228
+rect 106 204 115 228
+<< pdcontact >>
+rect 19 239 25 263
+rect 29 239 35 263
+rect 46 239 52 263
+rect 88 239 94 263
+rect 105 239 111 263
+rect 115 239 121 263
+rect 19 204 25 228
+rect 46 204 52 228
+rect 88 204 94 228
+rect 115 204 121 228
+<< nsubstratencontact >>
+rect 67 272 73 278
+<< polysilicon >>
+rect 26 263 28 266
+rect 43 263 45 266
+rect 95 263 97 266
+rect 112 263 114 266
+rect 26 236 28 239
+rect 43 236 45 239
+rect 95 236 97 239
+rect 112 236 114 239
+rect 26 234 114 236
+rect 35 228 37 234
+rect 104 228 106 234
+rect 35 201 37 204
+rect 104 201 106 204
+<< polycontact >>
+rect 67 236 73 242
+<< metal1 >>
+rect 29 278 150 282
+rect 29 263 35 278
+rect 105 277 150 278
+rect 105 263 111 277
+rect 19 228 25 239
+rect 46 228 52 239
+rect 67 242 73 248
+rect 88 228 94 239
+rect 115 228 121 239
+rect 46 170 52 173
+rect 88 170 94 173
+rect 116 170 122 173
+rect -6 117 0 144
+rect -12 85 0 96
+rect 147 93 150 277
+rect 140 82 152 93
+rect -166 34 -160 40
+rect -6 36 -3 40
+rect -6 32 0 36
+rect -85 -100 -79 -1
+rect 127 -75 134 1
+rect 19 -139 23 -85
+rect 19 -142 33 -139
+rect 117 -142 120 -85
+rect 119 -145 120 -142
+rect 127 -87 145 -75
+rect 127 -149 134 -87
+rect 5 -157 9 -152
+rect -40 -204 -35 -199
+rect 116 -208 119 -190
+rect -337 -229 -331 -223
+rect -238 -239 -235 -235
+rect 43 -250 46 -209
+rect 58 -250 65 -248
+rect 90 -249 93 -212
+rect 43 -253 65 -250
+rect 83 -252 93 -249
+rect 58 -254 65 -253
+<< m2contact >>
+rect 18 197 25 204
+rect 46 197 53 204
+rect 87 197 94 204
+rect 115 197 122 204
+rect -24 152 -16 159
+rect 18 -85 25 -78
+rect 115 -85 122 -78
+rect 23 -192 30 -185
+rect 69 -227 76 -220
+rect 113 -215 120 -208
+<< metal2 >>
+rect 18 166 24 197
+rect 46 166 52 197
+rect 88 166 94 197
+rect 116 166 122 197
+rect -16 153 6 157
+rect -166 79 -160 85
+rect 18 -78 24 10
+rect 46 -89 52 10
+rect 88 -78 94 10
+rect 116 -78 122 10
+rect 46 -92 120 -89
+rect 73 -220 76 -137
+rect 117 -208 120 -92
+<< m3contact >>
+rect 87 -85 94 -78
+rect 23 -185 30 -178
+<< metal3 >>
+rect 90 -89 94 -85
+rect 26 -93 94 -89
+rect 26 -178 30 -93
+use combined  combined_0
+timestamp 1772623303
+transform 1 0 -97 0 1 -220
+box -234 -88 233 202
+use inverter_layout  inverter_layout_0
+timestamp 1769263767
+transform 1 0 59 0 1 -218
+box 0 -55 30 0
+use row_decoder_layout  row_decoder_layout_0
+timestamp 1772180367
+transform 1 0 -151 0 -1 59
+box -9 -106 145 60
+use sram_2x2_layout  sram_2x2_layout_0
+timestamp 1772356917
+transform 1 0 -6 0 1 83
+box 6 -82 146 92
+<< labels >>
+rlabel metal1 67 278 73 282 0 VDD
+port 1 nsew
+rlabel metal1 67 242 73 248 0 PRE
+port 8 nsew
+rlabel metal1 -166 34 -160 40 0 RA
+port 2 nsew
+rlabel metal1 -337 -229 -331 -223 0 WE
+port 3 nsew
+rlabel metal1 134 -87 145 -75 0 VSS
+port 4 nsew
+rlabel metal1 140 82 152 93 0 VDD
+port 1 nsew
+rlabel metal2 -166 79 -160 85 0 RAS
+port 5 nsew
+rlabel metal1 -40 -204 -35 -199 0 SAE
+port 6 nsew
+rlabel metal1 5 -157 9 -152 0 OUT
+port 7 nsew
+rlabel metal1 -238 -239 -235 -235 0 DATA
+port 9 nsew
+rlabel metal1 58 -254 65 -248 0 CA
+port 10 nsew
+<< end >>

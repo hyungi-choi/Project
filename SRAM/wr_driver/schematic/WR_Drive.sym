@@ -1,0 +1,34 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+B 5 -22.5 -22.5 -17.5 -17.5 {name=BL dir=out}
+B 5 7.5 -22.5 12.5 -17.5 {name=BLB dir=out}
+B 5 -22.5 -122.5 -17.5 -117.5 {name=WE dir=in}
+B 5 57.5 -82.5 62.5 -77.5 {name=VDD dir=inout}
+B 5 7.5 -122.5 12.5 -117.5 {name=DATA dir=in}
+B 5 57.5 -62.5 62.5 -57.5 {name=VSS dir=inout}
+T {@symname} -44 -96 0 0 0.3 0.3 {}
+T {@name} -25 -72 0 0 0.2 0.2 {}
+T {BL} -25 -24 0 1 0.2 0.2 {}
+T {BLB} 35 -24 0 1 0.2 0.2 {}
+T {WE} -45 -124 0 0 0.2 0.2 {}
+T {VDD} 75 -104 0 1 0.2 0.2 {}
+T {DATA} 15 -124 0 0 0.2 0.2 {}
+T {VSS} 75 -54 0 1 0.2 0.2 {}
+N -50 -100 -50 -40 {lab=#net1}
+N -50 -100 40 -100 {lab=#net1}
+N 40 -100 40 -40 {lab=#net1}
+N -50 -40 40 -40 {lab=#net1}
+N -20 -120 -20 -100 {lab=#net1}
+N 10 -120 10 -100 {lab=#net1}
+N 40 -80 60 -80 {lab=#net1}
+N 40 -60 60 -60 {lab=#net1}
+N -20 -40 -20 -20 {lab=#net1}
+N 10 -40 10 -20 {lab=#net1}

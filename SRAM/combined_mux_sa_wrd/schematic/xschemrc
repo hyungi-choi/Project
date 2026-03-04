@@ -1,0 +1,7 @@
+# --- project-wide library paths (relative to this xschemrc) ---
+set PROJ_ROOT [file normalize [file join [file dirname [info script]] ../..]]
+
+
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/wr_driver/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/senseamp/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/mux/schematic

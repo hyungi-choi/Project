@@ -1,0 +1,70 @@
+* NGSPICE file created from combined.ext - technology: scmos
+
+.subckt MUX1 BL1 Y0 Y0B MUX_OUT MUX_OUTB VDD VSS BL0 BLB1 BLB0
+M1000 BLB1 Y0B MUX_OUTB VSS nfet w=1.8u l=0.6u
++  ad=3.78p pd=7.8u as=3.78p ps=7.8u
+M1001 BLB0 Y0 MUX_OUTB VSS nfet w=1.8u l=0.6u
++  ad=3.78p pd=7.8u as=3.78p ps=7.8u
+M1002 BLB1 Y0 MUX_OUTB VDD pfet w=4.2u l=0.6u
++  ad=8.82p pd=12.6u as=8.82p ps=12.6u
+M1003 MUX_OUT Y0 BL1 VDD pfet w=4.2u l=0.6u
++  ad=8.82p pd=12.6u as=8.82p ps=12.6u
+M1004 BLB0 Y0B MUX_OUTB VDD pfet w=4.2u l=0.6u
++  ad=8.82p pd=12.6u as=8.82p ps=12.6u
+M1005 MUX_OUT Y0B BL0 VDD pfet w=4.2u l=0.6u
++  ad=8.82p pd=12.6u as=8.82p ps=12.6u
+M1006 MUX_OUT Y0 BL0 VSS nfet w=1.8u l=0.6u
++  ad=3.78p pd=7.8u as=3.78p ps=7.8u
+M1007 MUX_OUT Y0B BL1 VSS nfet w=1.8u l=0.6u
++  ad=3.78p pd=7.8u as=3.78p ps=7.8u
+.ends
+
+.subckt Senseamp VDD OUT0 BLB BL SE VSS
+M1000 OUT0 a_66_12# VDD VDD pfet w=5.4u l=0.9u
++  ad=14.58p pd=16.2u as=14.58p ps=16.2u
+M1001 a_n28_6# SE VSS VSS nfet w=5.4u l=0.9u
++  ad=14.58p pd=16.2u as=14.58p ps=16.2u
+M1002 a_66_12# BL a_n28_6# VSS nfet w=1.8u l=0.9u
++  ad=4.86p pd=9u as=4.86p ps=9u
+M1003 a_66_12# a_n14_52# VDD VDD pfet w=5.4u l=0.9u
++  ad=14.58p pd=16.2u as=14.58p ps=16.2u
+M1004 a_n14_52# a_n14_52# VDD VDD pfet w=5.4u l=0.9u
++  ad=14.58p pd=16.2u as=14.58p ps=16.2u
+M1005 a_n14_52# BLB a_n28_6# VSS nfet w=1.8u l=0.9u
++  ad=4.86p pd=9u as=4.86p ps=9u
+M1006 OUT0 SE VSS VSS nfet w=2.7u l=0.9u
++  ad=7.29p pd=10.8u as=7.29p ps=10.8u
+.ends
+
+.subckt WR_Drive VSS WE DATA BLB BL VDD
+M1000 a_28_80# WE BLB VDD pfet w=21.6u l=0.9u
++  ad=64.8p pd=49.2u as=58.32p ps=48.6u
+M1001 a_208_n34# a_28_80# VDD VDD pfet w=54u l=0.9u
++  ad=0.1458n pd=0.1134m as=0.1458n ps=0.1134m
+M1002 a_n64_114# WE VDD VDD pfet w=10.8u l=0.9u
++  ad=32.4p pd=27.6u as=29.16p ps=27u
+M1003 BL WE a_208_n34# VSS nfet w=10.8u l=0.9u
++  ad=29.16p pd=27u as=29.16p ps=27u
+M1004 a_28_80# DATA VDD VDD pfet w=54u l=0.9u
++  ad=0.1458n pd=0.1134m as=0.1458n ps=0.1134m
+M1005 BL a_n64_114# a_208_n34# VDD pfet w=21.6u l=0.9u
++  ad=64.8p pd=49.2u as=58.32p ps=48.6u
+M1006 a_n64_114# WE VSS VSS nfet w=5.4u l=0.9u
++  ad=14.58p pd=16.2u as=14.58p ps=16.2u
+M1007 a_28_80# DATA VSS VSS nfet w=27u l=0.9u
++  ad=72.90001p pd=59.4u as=72.90001p ps=59.4u
+M1008 a_208_n34# a_28_80# VSS VSS nfet w=27u l=0.9u
++  ad=72.90001p pd=59.4u as=72.90001p ps=59.4u
+M1009 a_28_80# WE BLB VSS nfet w=10.8u l=0.9u
++  ad=29.16p pd=27u as=29.16p ps=27u
+.ends
+
+.subckt combined
+XMUX1_0 MUX1_0/BL1 MUX1_0/Y0 MUX1_0/Y0B WR_Drive_0/BL WR_Drive_0/BLB MUX1_0/VDD MUX1_0/VSS
++ MUX1_0/BL0 MUX1_0/BLB1 MUX1_0/BLB0 MUX1
+XSenseamp_0 MUX1_0/VDD Senseamp_0/OUT0 WR_Drive_0/BLB WR_Drive_0/BL Senseamp_0/SE
++ MUX1_0/VSS Senseamp
+XWR_Drive_0 MUX1_0/VSS WR_Drive_0/WE WR_Drive_0/DATA WR_Drive_0/BLB WR_Drive_0/BL
++ MUX1_0/VDD WR_Drive
+.ends
+

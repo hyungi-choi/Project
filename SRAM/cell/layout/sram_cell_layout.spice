@@ -1,0 +1,34 @@
+* NGSPICE file created from sram_cell_layout.ext - technology: scmos
+
+.subckt sram_cell_layout BLB VDD WL VSS BL
+M1000 Q WL BL VSS nfet w=1.8u l=0.6u
++  ad=5.67p pd=7.5u as=5.4p ps=9.6u
+M1001 Q QB VSS VSS nfet w=3.6u l=0.6u
++  ad=5.67p pd=7.5u as=8.64p ps=12u
+M1002 Q QB VDD VDD pfet w=3.6u l=0.6u
++  ad=8.64p pd=12u as=8.64p ps=12u
+M1003 VSS Q QB VSS nfet w=3.6u l=0.6u
++  ad=8.64p pd=12u as=5.67p ps=7.5u
+M1004 QB WL BLB VSS nfet w=1.8u l=0.6u
++  ad=5.67p pd=7.5u as=5.4p ps=9.6u
+M1005 VDD Q QB VDD pfet w=3.6u l=0.6u
++  ad=8.64p pd=12u as=8.64p ps=12u
+C0 VDD Q 0.20952f
+C1 WL Q 0.0189f
+C2 BLB VDD 0.13176f
+C3 WL BLB 0.0837f
+C4 BL Q 0.71496f
+C5 QB Q 0.11232f
+C6 BL VDD 0.13176f
+C7 QB VDD 0.82728f
+C8 BLB QB 0.71496f
+C9 WL BL 0.0837f
+C10 WL QB 0.0189f
+C11 BLB VSS 4.54845f
+C12 BL VSS 4.54845f
+C13 WL VSS 4.2618f
+C14 VDD VSS 12.6538f
+C15 Q VSS 3.36546f
+C16 QB VSS 2.7477f
+.ends
+

@@ -1,0 +1,106 @@
+magic
+tech scmos
+timestamp 1771489234
+<< nwell >>
+rect -33 -1 37 27
+<< ntransistor >>
+rect -19 -25 -17 -13
+rect 21 -25 23 -13
+rect -15 -32 -9 -30
+rect 13 -32 19 -30
+<< ptransistor >>
+rect -19 5 -17 17
+rect 21 5 23 17
+<< ndiffusion >>
+rect -21 -25 -19 -13
+rect -17 -25 -15 -13
+rect -15 -30 -9 -25
+rect 19 -25 21 -13
+rect 23 -25 25 -13
+rect -15 -36 -9 -32
+rect 13 -30 19 -25
+rect 13 -36 19 -32
+<< pdiffusion >>
+rect -21 5 -19 17
+rect -17 5 -15 17
+rect 19 5 21 17
+rect 23 5 25 17
+<< ndcontact >>
+rect -27 -25 -21 -13
+rect -15 -25 -9 -13
+rect 13 -25 19 -13
+rect 25 -25 31 -13
+rect -15 -42 -9 -36
+rect 13 -42 19 -36
+<< pdcontact >>
+rect -27 5 -21 17
+rect -15 5 -9 17
+rect 13 5 19 17
+rect 25 5 31 17
+<< psubstratepcontact >>
+rect -2 -82 6 -75
+<< nsubstratencontact >>
+rect -1 14 5 20
+<< polysilicon >>
+rect -19 17 -17 20
+rect 21 17 23 20
+rect -19 1 -17 5
+rect -19 -1 10 1
+rect -19 -13 -17 -1
+rect 21 -7 23 5
+rect -6 -9 23 -7
+rect 21 -13 23 -9
+rect -19 -28 -17 -25
+rect -18 -32 -15 -30
+rect -9 -32 -1 -30
+rect 21 -28 23 -25
+rect 5 -32 13 -30
+rect 19 -32 22 -30
+<< polycontact >>
+rect 10 -3 16 3
+rect -12 -11 -6 -5
+rect -1 -34 5 -28
+<< metal1 >>
+rect -33 20 37 26
+rect -27 17 -21 20
+rect 25 17 31 20
+rect -15 -5 -9 5
+rect 13 3 19 5
+rect 16 -3 19 3
+rect -15 -11 -12 -5
+rect -15 -13 -9 -11
+rect 13 -13 19 -3
+rect -30 -33 -1 -29
+rect 5 -33 34 -29
+rect -15 -45 -9 -42
+rect 13 -45 19 -42
+<< m2contact >>
+rect -28 -13 -21 -6
+rect 25 -13 32 -6
+rect -15 -52 -8 -45
+rect 13 -52 20 -45
+rect -2 -75 6 -68
+<< metal2 >>
+rect -27 -6 -21 32
+rect -27 -62 -21 -13
+rect -15 -45 -9 32
+rect 13 -45 19 32
+rect 25 -6 31 32
+rect -15 -55 -9 -52
+rect 13 -55 19 -52
+rect 25 -62 31 -13
+rect -27 -68 31 -62
+<< labels >>
+rlabel metal1 -33 20 37 26 0 VDD
+port 8 nsew
+rlabel metal1 -30 -33 34 -29 0 WL
+port 9 nsew
+rlabel metal2 -27 -68 31 -62 0 VSS
+port 10 nsew
+rlabel metal1 -15 -13 -9 5 0 Q
+rlabel metal1 13 -13 19 5 0 QB
+rlabel metal2 13 27 19 32 0 BLB
+port 7 nsew
+rlabel metal2 -15 27 -9 32 0 BL
+port 11 nsew
+<< end >>

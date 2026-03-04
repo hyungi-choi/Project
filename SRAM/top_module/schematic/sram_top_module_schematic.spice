@@ -1,0 +1,209 @@
+** sch_path: /home/innostar/sram/sram_top_module_schematic.sch
+.subckt sram_top_module_schematic VDD RA WE VSS RAS SAE OUT PRE DATA CA
+*.iopin VDD
+*.iopin VSS
+*.ipin RA
+*.ipin RAS
+*.ipin PRE
+*.ipin SAE
+*.ipin DATA
+*.ipin WE
+*.ipin CA
+*.opin OUT
+x2 BL_0 BLB_1 BLB_0 BL_1 VDD VSS WL_0 WL_1 sram_2x2_schematic
+x1 VDD PRE BL_0 BLB_0 precharge_schematic
+x3 VDD PRE BL_1 BLB_1 precharge_schematic
+x4 VDD RA WL_1 VSS WL_0 RAS row_decoder_schematic
+x5 BLB_1 BLB_0 BL_0 BL_1 DATA WE SAE VDD VSS CAB CA OUT combined
+x6 VDD CA CAB VSS inverter_schematic
+.ends
+
+* expanding   symbol:  /home/innostar/sram/Project/Project/Cell/sram_2x2_schematic.sym # of pins=8
+** sym_path: /home/innostar/sram/Project/Project/Cell/sram_2x2_schematic.sym
+** sch_path: /home/innostar/sram/Project/Project/Cell/sram_2x2_schematic.sch
+.subckt sram_2x2_schematic BL_0 BLB_1 BLB_0 BL_1 VDD VSS WL_0 WL_1
+*.ipin WL_0
+*.ipin WL_1
+*.iopin BL_0
+*.iopin BLB_0
+*.iopin BL_1
+*.iopin BLB_1
+*.iopin VDD
+*.iopin VSS
+X1 WL_0 BL_0 BLB_0 VDD VSS sram_cell_schematic
+X2 WL_0 BL_1 BLB_1 VDD VSS sram_cell_schematic
+X3 WL_1 BL_0 BLB_0 VDD VSS sram_cell_schematic
+X4 WL_1 BL_1 BLB_1 VDD VSS sram_cell_schematic
+.ends
+
+
+* expanding   symbol:  precharge_schematic.sym # of pins=4
+** sym_path: /home/innostar/sram/precharge_schematic.sym
+** sch_path: /home/innostar/sram/precharge_schematic.sch
+.subckt precharge_schematic VDD PREP BL BLB
+*.iopin VDD
+*.iopin BL
+*.iopin BLB
+*.iopin PREP
+M3 VDD PREP BL VDD pfet w=7.2u l=0.6u m=1
+M1 BLB PREP VDD VDD pfet w=7.2u l=0.6u m=1
+M2 BL PREP BLB VDD pfet w=7.2u l=0.6u m=1
+.ends
+
+
+* expanding   symbol:  row_decoder_schematic.sym # of pins=6
+** sym_path: /home/innostar/sram/row_decoder_schematic.sym
+** sch_path: /home/innostar/sram/row_decoder_schematic.sch
+.subckt row_decoder_schematic VDD IN OUT VSS OUT_B EN
+*.iopin VDD
+*.iopin VSS
+*.ipin IN
+*.ipin EN
+*.opin OUT
+*.opin OUT_B
+x1 VDD net2 EN net3 VSS nand_schematic
+x2 VDD net1 EN net4 VSS nand_schematic
+x3 VDD net1 net2 VSS inverter_schematic
+x4 VDD IN net1 VSS inverter_schematic
+x5 VDD net3 OUT VSS inverter_schematic
+x6 VDD net4 OUT_B VSS inverter_schematic
+.ends
+
+
+* expanding   symbol:  combined.sym # of pins=12
+** sym_path: /home/innostar/sram/combined.sym
+** sch_path: /home/innostar/sram/combined.sch
+.subckt combined BLB1 BLB0 BL0 BL1 DATA WE SE VDD VSS Y0 Y0b OUT0
+*.ipin BL0
+*.ipin BLB0
+*.ipin BL1
+*.ipin BLB1
+*.ipin DATA
+*.ipin WE
+*.ipin SE
+*.iopin VDD
+*.iopin VSS
+*.ipin Y0
+*.opin OUT0
+*.ipin Y0b
+x5 MUX_OUT MUX_OUTB WE VDD DATA VSS WR_Drive
+x1 BL0 BLB0 BL1 BLB1 VDD VSS Y0 Y0b MUX_OUT MUX_OUTB MUX1
+x2 VDD OUT0 MUX_OUTB MUX_OUT SE VSS Senseamp
+.ends
+
+
+* expanding   symbol:  inverter_schematic.sym # of pins=4
+** sym_path: /home/innostar/sram/inverter_schematic.sym
+** sch_path: /home/innostar/sram/inverter_schematic.sch
+.subckt inverter_schematic VDD IN OUT VSS
+*.ipin IN
+*.opin OUT
+*.iopin VSS
+*.iopin VDD
+M2 OUT IN VSS VSS nfet w=1.8u l=0.6u m=1
+M1 OUT IN VDD VDD pfet w=4.2u l=0.6u m=1
+.ends
+
+
+* expanding   symbol:  sram_cell_schematic.sym # of pins=5
+** sym_path: /home/innostar/sram/sram_cell_schematic.sym
+** sch_path: /home/innostar/sram/sram_cell_schematic.sch
+.subckt sram_cell_schematic WL BL BLB VDD VSS
+*.ipin WL
+*.iopin BL
+*.iopin BLB
+*.iopin VDD
+*.iopin VSS
+M4 VSS Q QB VSS nfet w=3.6u l=0.6u m=1
+M5 QB Q VDD VDD pfet w=3.6u l=0.6u m=1
+M6 Q QB VDD VDD pfet w=3.6u l=0.6u m=1
+M1 Q WL BL VSS nfet w=1.8u l=0.6u m=1
+M3 VSS QB Q VSS nfet w=3.6u l=0.6u m=1
+M2 BLB WL QB VSS nfet w=1.8u l=0.6u m=1
+.ends
+
+
+* expanding   symbol:  nand_schematic.sym # of pins=5
+** sym_path: /home/innostar/sram/nand_schematic.sym
+** sch_path: /home/innostar/sram/nand_schematic.sch
+.subckt nand_schematic VDD A B OUT VSS
+*.iopin VDD
+*.iopin VSS
+*.iopin A
+*.iopin B
+*.iopin OUT
+M1 OUT A VDD VDD pfet w=4.2u l=0.6u m=1
+M2 OUT B VDD VDD pfet w=4.2u l=0.6u m=1
+M3 OUT B net1 VSS nfet w=3.6u l=0.6u m=1
+M4 net1 A VSS VSS nfet w=3.6u l=0.6u m=1
+.ends
+
+
+* expanding   symbol:  /home/innostar/sram/Project/WR/WR_Drive.sym # of pins=6
+** sym_path: /home/innostar/sram/Project/WR/WR_Drive.sym
+** sch_path: /home/innostar/sram/Project/WR/WR_Drive.sch
+.subckt WR_Drive BL BLB WE VDD DATA VSS
+*.ipin WE
+*.ipin DATA
+*.iopin VDD
+*.iopin VSS
+*.opin BL
+*.opin BLB
+M1 net1 WE VSS VSS nfet w=3.6u l=0.6u m=1
+M4 net2 DATA VDD VDD pfet w=36u l=0.6u m=1
+M5 net3 net2 VSS VSS nfet w=18u l=0.6u m=1
+M6 net3 net2 VDD VDD pfet w=36u l=0.6u m=1
+M7 net2 net1 BLB VDD pfet w=14.4u l=0.6u m=1
+M8 BLB WE net2 VSS nfet w=7.2u l=0.6u m=1
+M2 net1 WE VDD VDD pfet w=7.2u l=0.6u m=1
+M3 net2 DATA VSS VSS nfet w=18u l=0.6u m=1
+M9 BL WE net3 VSS nfet w=7.2u l=0.6u m=1
+M10 net3 net1 BL VDD pfet w=14.4u l=0.6u m=1
+.ends
+
+
+* expanding   symbol:  /home/innostar/sram/Project/MUX1/MUX1.sym # of pins=10
+** sym_path: /home/innostar/sram/Project/MUX1/MUX1.sym
+** sch_path: /home/innostar/sram/Project/MUX1/MUX1.sch
+.subckt MUX1 BL0 BLB0 BL1 BLB1 VDD VSS Y0 Y0b MUX_OUT MUX_OUTB
+*.iopin BL0
+*.iopin BLB0
+*.iopin BL1
+*.iopin BLB1
+*.iopin VDD
+*.iopin VSS
+*.iopin Y0
+*.iopin Y0b
+*.opin MUX_OUT
+*.opin MUX_OUTB
+M1 BL0 Y0b MUX_OUT VDD pfet w=4.2u l=0.6u m=1
+M2 BLB0 Y0b MUX_OUTB VDD pfet w=4.2u l=0.6u m=1
+M3 BL1 Y0 MUX_OUT VDD pfet w=4.2u l=0.6u m=1
+M4 BLB1 Y0 MUX_OUTB VDD pfet w=4.2u l=0.6u m=1
+M5 BL0 Y0 MUX_OUT VSS nfet w=1.8u l=0.6u m=1
+M6 BLB0 Y0 MUX_OUTB VSS nfet w=1.8u l=0.6u m=1
+M7 BL1 Y0b MUX_OUT VSS nfet w=1.8u l=0.6u m=1
+M8 BLB1 Y0b MUX_OUTB VSS nfet w=1.8u l=0.6u m=1
+.ends
+
+
+* expanding   symbol:  /home/innostar/sram/Project/Senseamp_read_tb/Senseamp/Senseamp.sym # of pins=6
+** sym_path: /home/innostar/sram/Project/Senseamp_read_tb/Senseamp/Senseamp.sym
+** sch_path: /home/innostar/sram/Project/Senseamp_read_tb/Senseamp/Senseamp.sch
+.subckt Senseamp VDD OUT0 BLB BL SE VSS
+*.ipin BLB
+*.ipin BL
+*.ipin SE
+*.opin OUT0
+*.iopin VSS
+*.iopin VDD
+M7 net2 net1 VDD VDD pfet w=3.6u l=0.6u m=1
+M9 OUT0 net2 VDD VDD pfet w=3.6u l=0.6u m=1
+M1 net1 BLB net3 VSS nfet w=1.2u l=0.6u m=1
+M2 net3 SE VSS VSS nfet w=3.6u l=0.6u m=1
+M3 net2 BL net3 VSS nfet w=1.2u l=0.6u m=1
+M4 OUT0 SE VSS VSS nfet w=1.8u l=0.6u m=1
+M5 net1 net1 VDD VDD pfet w=3.6u l=0.6u m=1
+.ends
+
+.end

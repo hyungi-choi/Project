@@ -1,0 +1,43 @@
+timestamp 1772356917
+version 8.3
+tech scmos
+style AMI0.5um(amic5)from:T11Z
+scale 1000 1 15
+resistclasses 82400 102700 816000 816000 1 22300 41300 41300 90 90 60
+use sram_cell_layout sram_cell_layout_3 1 0 218 0 1 -36
+use sram_cell_layout sram_cell_layout_2 1 0 78 0 1 -36
+use sram_cell_layout sram_cell_layout_1 -1 0 86 0 -1 56
+use sram_cell_layout sram_cell_layout_0 -1 0 226 0 -1 56
+node "m1_286_n102#" 0 344.28 286 -102 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48 28 0 0 0 0
+node "m1_145_n102#" 0 538.74 145 -102 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 104 42 0 0 0 0
+node "m1_12_n102#" 0 344.28 12 -102 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48 28 0 0 0 0
+node "m1_286_114#" 0 344.28 286 114 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48 28 0 0 0 0
+node "m1_146_114#" 0 538.74 146 114 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 104 42 0 0 0 0
+node "m1_12_114#" 0 344.28 12 114 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48 28 0 0 0 0
+substrate "w_n1073741817_n1073741817#" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "sram_cell_layout_3/VSS" "sram_cell_layout_3/VDD" -343.44
+cap "sram_cell_layout_3/VDD" "sram_cell_layout_3/BL" -114.48
+cap "sram_cell_layout_3/VDD" "sram_cell_layout_2/BLB" -114.48
+cap "sram_cell_layout_3/VDD" "sram_cell_layout_2/BL" -114.48
+cap "sram_cell_layout_3/VDD" "sram_cell_layout_3/VSS" -114.48
+cap "sram_cell_layout_3/BLB" "sram_cell_layout_3/VDD" -114.48
+cap "sram_cell_layout_0/VDD" "sram_cell_layout_1/VSS" -1.42109e-14
+merge "sram_cell_layout_0/VSS" "sram_cell_layout_1/VSS" -2764.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1296 -288 0 0
+merge "sram_cell_layout_1/VSS" "sram_cell_layout_2/VSS"
+merge "sram_cell_layout_2/VSS" "sram_cell_layout_3/VSS"
+merge "sram_cell_layout_3/VSS" "w_n1073741817_n1073741817#"
+merge "sram_cell_layout_0/VDD" "sram_cell_layout_1/VDD" -10946.4 0 0 0 0 -4480 -772 0 0 0 0 0 0 0 0 0 0 -3360 -632 0 0 0 0
+merge "sram_cell_layout_1/VDD" "sram_cell_layout_2/VDD"
+merge "sram_cell_layout_2/VDD" "sram_cell_layout_3/VDD"
+merge "sram_cell_layout_1/BL" "sram_cell_layout_2/BLB" -921.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -432 -96 0 0
+merge "sram_cell_layout_2/WL" "m1_286_n102#" -738.18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8 -66 0 0 0 0
+merge "m1_286_n102#" "m1_12_n102#"
+merge "m1_12_n102#" "sram_cell_layout_3/WL"
+merge "sram_cell_layout_3/WL" "m1_145_n102#"
+merge "sram_cell_layout_0/WL" "m1_286_114#" -738.18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8 -66 0 0 0 0
+merge "m1_286_114#" "sram_cell_layout_1/WL"
+merge "sram_cell_layout_1/WL" "m1_146_114#"
+merge "m1_146_114#" "m1_12_114#"
+merge "sram_cell_layout_0/BL" "sram_cell_layout_3/BLB" -921.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -432 -96 0 0
+merge "sram_cell_layout_0/BLB" "sram_cell_layout_3/BL" -921.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -432 -96 0 0
+merge "sram_cell_layout_1/BLB" "sram_cell_layout_2/BL" -921.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -432 -96 0 0

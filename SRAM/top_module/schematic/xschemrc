@@ -1,0 +1,15 @@
+# --- project-wide library paths (relative to this xschemrc) ---
+set PROJ_ROOT [file normalize [file join [file dirname [info script]] ../..]]
+
+
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/precharge/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/top_module/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/2x2/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/row_decoder/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/inverter/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/combined_mux_sa_wrd/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/nand/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/cell/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/senseamp/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/wr_driver/schematic
+append XSCHEM_LIBRARY_PATH :$PROJ_ROOT/mux/schematic
